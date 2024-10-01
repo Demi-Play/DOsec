@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import { registerUser } from '../api/Auth';
+import { loginUser } from '../api/Auth';
 
-function Register() {
+function Login({ setToken }) {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const data = await registerUser(username, email, password);
-      alert('Registration successful');
+      const data = await loginUser(username, password);
+      setToken(data.token);
+      alert('Login successful');
     } catch (error) {
-      alert('Registration failed');
+      alert('Login failed');
     }
   };
 
   return (
     <div>
-      <h2>Register</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input 
           type="text" 
@@ -27,21 +27,15 @@ function Register() {
           onChange={(e) => setUsername(e.target.value)} 
         />
         <input 
-          type="email" 
-          placeholder="Email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-        />
-        <input 
           type="password" 
           placeholder="Password" 
           value={password} 
           onChange={(e) => setPassword(e.target.value)} 
         />
-        <button type="submit">Register</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
 }
 
-export default Register;
+export default Login;

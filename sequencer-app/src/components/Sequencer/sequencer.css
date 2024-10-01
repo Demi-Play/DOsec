@@ -1,0 +1,38 @@
+.sequencer {
+    background-color: #181818;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .track, .mixer-track {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #282828;
+    border-radius: 8px;
+  }
+  
+  input[type="file"] {
+    color: #ffffff;
+  }
+  
+  button {
+    background-color: #ff6f00;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .mixer {
+    background-color: #181818;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  

@@ -1,0 +1,15 @@
+.timeline {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    padding: 10px;
+    overflow-x: scroll;
+  }
+  
+  .time-mark {
+    flex: 0 0 100px;
+    text-align: center;
+    color: #bbbbbb;
+    border-right: 1px solid #555555;
+  }
+  

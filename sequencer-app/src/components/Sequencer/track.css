@@ -1,0 +1,20 @@
+.track {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #282828;
+    border-radius: 8px;
+    position: relative;
+}
+
+.audio-clip {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 30px;
+    background-color: #ff6f00;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    cursor: grab;
+}
